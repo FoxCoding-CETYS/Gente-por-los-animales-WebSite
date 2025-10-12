@@ -1,7 +1,5 @@
 "use client"
 
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { HeroSection } from "@/components/sections/hero-section"
 import { DonationSection } from "@/components/sections/donation-section"
 import { AboutSection } from "@/components/sections/about-section"
@@ -15,7 +13,6 @@ import { CTASection } from "@/components/sections/cta-section"
 export default function Face4PetsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header /*currentPage="/"*/ />
 
       <HeroSection />
 
@@ -39,7 +36,6 @@ export default function Face4PetsPage() {
         //buttonText="Dona Ahora"
       />
 
-      <Footer />
     </div>
   )
 }
