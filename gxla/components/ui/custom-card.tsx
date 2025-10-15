@@ -26,8 +26,8 @@ interface CustomCardProps {
 
 const sizeClasses = {
   sm: "px-4 py-2 text-sm",
-  md: "px-6 sm:px-8 py-2 sm:py-3",
-  lg: "lg:h-[407px] lg:w-[545px]",
+  md: "lg:h-[354px] lg:w-[288px]",
+  lg: "lg:w-[545px]",
 }
 
 export function CustomCard({
@@ -59,7 +59,7 @@ export function CustomCard({
       >
         {icon && <img src={icon} alt="" className="mb-2" />}
         {title && <h3 className="text-[32px] font-bold">{title}</h3>}
-        {children && <p className="text-[20px] w-[454px] pt-[20px] font-light">{children}</p>}
+        {children && <p className="text-[20px] w-11/12 pt-[20px] font-light mb-5">{children}</p>}
       </div>
     )
   }
@@ -87,7 +87,7 @@ export function CustomCard({
           {title5 && <h1 className="text-[32px] w-[454px] pt-[20px] font-bold">{title5}</h1>}
           {title6 && <h1 className="text-[32px] w-[454px] pt-[20px] font-bold">{title6}</h1>}
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row mb-5">
           {text4 && <p className="text-[20px] w-[454px] pt-[20px] font-light">{text4}</p>}
           {text5 && <p className="text-[20px] w-[454px] pt-[20px] font-light">{text5}</p>}
           {text6 && <p className="text-[20px] w-[454px] pt-[20px] font-light">{text6}</p>}

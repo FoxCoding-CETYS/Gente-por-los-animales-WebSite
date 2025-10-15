@@ -66,20 +66,59 @@ export default function NosotrosPage() {
                 </div>
             </div>
             {/* Alianzas estrategicas */}
-            <div className="bg-[#F9FAFB]">
-                <CustomCard variant="normal" size="lg" icon="/Circle.png" title="Clínica y Estética Canina" className="w-72 h-80">Atención médica para animales en adopción y programas de esterilización</CustomCard>
+            <div className="bg-[#F9FAFB] flex flex-col justify-center items-center">
+                <h1 className="font-geist text-black text-6xl font-bold mt-10 md:text-[36px] text-center"> Alianzas estratégicas </h1>
+                <div className="flex flex-row p-8 gap-8">
+                    <CustomCard variant="normal" size="md" icon="/Circle.png" title="Clínica y Estética Canina">Atención médica para animales en adopción y programas de esterilización</CustomCard>
+                    <CustomCard variant="normal" size="md" icon="/Circle.png" title="Pet Zone">Clínica veterinaria participante en programas de esterilización</CustomCard>
+                    <CustomCard variant="normal" size="md" icon="/Circle.png" title="DIFOSA">Facilita almacén para resguardo y distribución de donativos</CustomCard>
+                    <CustomCard variant="normal" size="md" icon="/Circle.png" title="Spay México">Coorganizadora de campañas de esterilización</CustomCard>
+                </div>
             </div>
             {/* Patrocinadores */}
-            <div>
-            
+            {/* Corregir centrado de texto */}
+            <div className="flex flex-col justify-center items-center">
+                <h1 className="font-geist text-black text-6xl font-bold mt-10 md:text-[36px]"> Patrocinadores </h1>
+                <div className="flex flex-row p-8 gap-8">
+                    <div >
+                        <img src="/bunker.png" alt="El bunker colectivo" className="w-44 h-44"/>
+                    </div>
+                    <div className="w-44 h-44 bg-[#F2F2F2] flex items-center justify-center">
+                        <p className="font-bold text-[32px] leading-tight">Zayda Torres</p>
+                    </div>
+                    <div className="w-44 h-44 bg-[#F2F2F2] flex items-center justify-center">
+                        <p className="font-bold text-[32px]">La Casa de Lolo Café & Matcha</p>
+                    </div>
+                    <div className="w-44 h-44 bg-[#F2F2F2] flex items-center justify-center">
+                        <p className="font-bold text-[32px]">Mega Homes</p>
+                    </div>
+                </div>
             </div>
             {/* Financiamiento */}
-            <div className="bg-[#F9FAFB]">
-
+            <div className="bg-[#F9FAFB] flex flex-col justify-center items-center">
+                <h1 className="font-geist text-black text-6xl font-bold p-10 md:text-[36px]"> Financiamiento </h1>
+                <div className="flex flex-row justify-center gap-10">
+                    <CustomCard variant="normal" size="lg" icon="/heartblue.png" title="Cuotas de recuperación" className="w-11/12">
+                        <p className="text-left">
+                            Al prestar algunos de los servicios de la organización, se requieren cuotas de recuperación que ayuden a solventar en todo o en parte el costo que esto representa.
+                        <br /><br />
+                            Por ejemplo, al adoptar un perro o un gato, se solicita una cuota de recuperación que, si bien no solventa en su totalidad la inversión que la asociación realiza en cada uno de los animales, resulta de ayuda para compensar una parte.
+                        </p>
+                    </CustomCard>
+                    <CustomCard variant="normal" size="lg" icon="/heartblue.png" title="Cuotas de recuperación" className="w-11/12">
+                        <p className="text-left">
+                            Al prestar algunos de los servicios de la organización, se requieren cuotas de recuperación que ayuden a solventar en todo o en parte el costo que esto representa.
+                        <br /><br />
+                            Por ejemplo, al adoptar un perro o un gato, se solicita una cuota de recuperación que, si bien no solventa en su totalidad la inversión que la asociación realiza en cada uno de los animales, resulta de ayuda para compensar una parte.
+                        </p>
+                    </CustomCard>
+                </div>
             </div>
             {/* Call to action */}
-            <div>
-
+            <div className="flex flex-col items-center justify-center px-3 mt-12 w-screen bg-[#05DF72] text-black text-center">
+                <h1 className="font-geist text-black text-3xl font-bold mt-10 md:text-[36px]"> ¿Quiéres ser parte del cambio? </h1>
+                <p className="text-[20px]"> Conoce nuestra historia, misión y los valores que nos impulsan a trabajar por el bienestar animal. </p>
+                <CustomButton size="lg" className="mb-14 mt-6">QUIERO AYUDAR</CustomButton>
             </div>
         </>
     );
