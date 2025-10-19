@@ -10,9 +10,9 @@ import { SuccessStoriesSection } from "@/components/sections/success-stories-sec
 import { SponsorsSection } from "@/components/sections/sponsors-section"
 import { CTASection } from "@/components/sections/cta-section"
 
-export default function Face4PetsPage() {
+export default function GxlaPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="h-fit bg-white">
 
       <HeroSection />
 
