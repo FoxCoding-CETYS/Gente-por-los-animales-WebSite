@@ -1,11 +1,12 @@
 import ActionsCard from "@/components/ui/actions";
+import Image from "next/image";
 
 
 export default function AccionesPage() {
     return(
-    <div className="">
+    <>
 
-        <div className="flex flex-col items-center justify-center py-32 px-3 mt-12 w-screen bg-[#05DF72] text-black text-center">
+        <div className="flex flex-col items-center justify-center py-32 px-3 w-screen bg-[#05DF72] text-black text-center">
             <h1 className="text-6xl font-bold"> ¿CÓMO PUEDES AYUDAR?</h1>
             <p className="text-3xl">Elige la forma en que quieres contribuir al bienestar animal en nuestra comunidad.</p>
         </div>
@@ -63,18 +64,36 @@ export default function AccionesPage() {
 
         <div className="flex flex-col items-center justify-center py-26 px-3 gap-6 mt-12 w-screen bg-[#F9FAFB] text-black text-center">
             <h1 className="text-4xl font-bold">¿Necesitas Más Información?</h1>
-            <p className="text-xl w-3/4 md:w-2/3 lg:w-1/2">Si tienes dudas sobre cualquiera de nuestros servicios o no estás seguro de cuál opción es la mejor para tu situación, no dudes en contactarnos. Nuestro equipo estará encantado de ayudarte.</p>
+            <p className="text-xl w-3/4 md:w-2/3 lg:w-4/9">Si tienes dudas sobre cualquiera de nuestros servicios o no estás seguro de cuál opción es la mejor para tu situación, no dudes en contactarnos. Nuestro equipo estará encantado de ayudarte.</p>
         
-            <div className="flex flex-row justify-between gap-y-2 font-bold items-center w-4/5 lg:w-2/5 text-[14px] lg:text-[20px] md:text-[14px]">
-                <button className="bg-[#06F180] flex flex-row shadow-lg py-2 px-4 rounded-2xl transition-all hover:scale-105 cursor-pointer">
+            <div className="flex flex-row space-x-4 justify-center gap-y-2 font-bold items-center w-4/5 lg:w-2/5 text-[14px] lg:text-[20px] md:text-[14px]">
+                <button className="bg-[#06F180] flex flex-row shadow-lg py-2 px-4 rounded-2xl hover:scale-105 cursor-pointer transition md:mx-2">
                     Contactar por WhatsApp
                 </button>
-                <button className='text-[#00A63E] bg-[#F9FAFB] rounded-2xl shadow-lg px-4 py-3 cursor-pointer hover:scale-105'>
+                <button className='text-[#00A63E] bg-[#F9FAFB] rounded-2xl shadow-lg px-9 py-3 cursor-pointer hover:scale-105 transition md:mx-2'>
                     Enviar Email
                 </button>  
             </div>
         </div>
 
-    </div>
+        <div className="flex flex-row bg-[#FEF2F2] items-start justify-center p-8 border-l-9 border-[#FF6467] gap-8">
+            <Image
+                src="/actionsIcons/emergencia.svg"
+                alt="Emergencia"
+                width={44}
+                height={44}
+            />
+            <div className="w-1/2 space-y-5">
+                <h1 className="text-2xl font-bold">¿Es una Emergencia?</h1>
+                <p className="text-xl">Si encuentras un animal en peligro inmediato o presencias maltrato animal, 
+                    contacta inmediatamente a las autoridades locales o llama a nuestra línea de emergencia.
+                </p>
+                <button className='text-white bg-[#E7000B] font-bold rounded-2xl shadow-lg px-8 py-1 cursor-pointer hover:scale-105 transition text-[14px] lg:text-[20px] md:text-[14px]'>
+                    Línea de emergencia
+                </button>  
+            </div>
+        </div>
+        
+    </>
     );
 }

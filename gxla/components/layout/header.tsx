@@ -8,7 +8,7 @@ import { useState } from "react";
 export function Header(){
     const [isOpen, setIsOpen] = useState(false);
     return(
-        <nav className="fixed top-0 left-0 w-screen bg-white backdrop-blur-md z-1000 shadow-sm shadow-[#00A63E] text-black">
+        <nav className="sticky top-0 left-0 w-screen bg-white backdrop-blur-md z-1000 shadow-sm shadow-[#00A63E] text-black py-0.5">
             <div className="flex items-center justify-between h-full px-2 py-2 mx-5 my-4 gap-10">
                 <div>
                     <Image 
