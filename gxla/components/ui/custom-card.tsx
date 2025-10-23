@@ -27,7 +27,7 @@ interface CustomCardProps {
 const sizeClasses = {
   sm: "px-4 py-2 text-sm",
   md: "lg:h-[354px] lg:w-[288px]",
-  lg: "lg:w-[545px] w-7/11",
+  lg: "lg:w-[545px] w-7/11 h-9/12",
 }
 
 export function CustomCard({
@@ -71,26 +71,26 @@ export function CustomCard({
     >
       {icon && <img src={icon} alt="" className="mb-2 w-20 h-20 mt-3" />}
       {title && <h3 className="text-[36px] font-bold">{title}</h3>} 
-      <div className="w-[1173px]">
-        <div className="flex flex-row">
-          {title1 && <h1 className="w-[454px] pt-[20px] font-bold text-[32px]">{title1}</h1>}
-          {title2 && <h1 className="w-[454px] pt-[20px] font-bold text-[32px]">{title2}</h1>}
-          {title3 && <h1 className="w-[454px] pt-[20px] font-bold text-[32px]">{title3}</h1>}
+      <div className="w-10/12 flex flex-col items-center justify-center text-center">
+        <div className="grid lg:grid-cols-3 grid-cols-2 w-full">
+          {title1 && <h1 className="pt-[20px] font-bold text-[32px]">{title1}</h1>}
+          {title2 && <h1 className="pt-[20px] font-bold text-[32px]">{title2}</h1>}
+          {title3 && <h1 className="pt-[20px] font-bold text-[32px]">{title3}</h1>}
         </div>
-        <div className="flex flex-row">
-          {text1 && <p className="text-[20px] w-8/12 pt-[20px] font-light">{text1}</p>}
-          {text2 && <p className="text-[20px] w-8/12 pt-[20px] font-light">{text2}</p>}
-          {text3 && <p className="text-[20px] w-8/12 pt-[20px] font-light">{text3}</p>}
+        <div className="grid lg:grid-cols-3 grid-cols-2 w-full">
+          {text1 && <p className="text-[20px] pt-[20px] font-light">{text1}</p>}
+          {text2 && <p className="text-[20px] pt-[20px] font-light">{text2}</p>}
+          {text3 && <p className="text-[20px] pt-[20px] font-light">{text3}</p>}
         </div>
-        <div className="flex flex-row">
-          {title4 && <h1 className="text-[32px] w-[454px] pt-[20px] font-bold">{title4}</h1>}
-          {title5 && <h1 className="text-[32px] w-[454px] pt-[20px] font-bold">{title5}</h1>}
-          {title6 && <h1 className="text-[32px] w-[454px] pt-[20px] font-bold">{title6}</h1>}
+        <div className="grid lg:grid-cols-3 grid-cols-2 w-full">
+          {title4 && <h1 className="text-[32px] pt-[20px] font-bold">{title4}</h1>}
+          {title5 && <h1 className="text-[32px] pt-[20px] font-bold">{title5}</h1>}
+          {title6 && <h1 className="text-[32px] pt-[20px] font-bold">{title6}</h1>}
         </div>
-        <div className="flex flex-row mb-5">
-          {text4 && <p className="text-[20px] w-[454px] pt-[20px] font-light">{text4}</p>}
-          {text5 && <p className="text-[20px] w-[454px] pt-[20px] font-light">{text5}</p>}
-          {text6 && <p className="text-[20px] w-[454px] pt-[20px] font-light">{text6}</p>}
+        <div className="grid lg:grid-cols-3 grid-cols-2 w-full mb-10">
+          {text4 && <p className="text-[20px] pt-[20px] font-light">{text4}</p>}
+          {text5 && <p className="text-[20px] pt-[20px] font-light">{text5}</p>}
+          {text6 && <p className="text-[20px] pt-[20px] font-light">{text6}</p>}
         </div>
       </div>
     </div>
