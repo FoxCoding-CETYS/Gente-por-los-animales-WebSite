@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geistSans.className}>
+    <html lang="en" className={`${geistSans.className} scroll-smooth scroll-pt-20 lg:scroll-pt-27`}>
       <body>
         <Header/>
         {children}

@@ -72,7 +72,7 @@ export function CustomCard({
         onClick={onClick}
       >
         <div className="flex flex-col lg:justify-center items-center">
-          {icon && <img src={icon} alt="" className="lg:mb-2 w-16 h-16 lg:mt-3" />}
+          {icon && <img src={icon} alt="" className="lg:mb-5 w-16 h-16 lg:mt-3" />}
           {title && <h3 className="lg:text-[32px] text-[24px] font-bold text-center">{title}</h3>}
         </div>
         {children && <div className="lg:text-[20px] w-11/12 text-[16px] pt-[10px] font-light mb-5 text-center">{children}</div>}
