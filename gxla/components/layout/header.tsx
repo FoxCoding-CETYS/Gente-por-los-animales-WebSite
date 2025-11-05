@@ -39,9 +39,13 @@ export function Header(){
                     <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
                         <Link href="#Contacto">Contacto</Link>
                     </li>
-                    <CustomButton variant="primary" size="sm" className="w-full sm:w-auto">
+                    <li>
+                    <Link href="/nosotros#financiamiento" aria-label="Ir a Financiamiento">
+                        <CustomButton variant="primary" size="sm" className="w-full sm:w-auto">
                         DONAR
-                    </CustomButton>
+                        </CustomButton>
+                    </Link>
+                    </li>
                 </ul>
             </div>
             
@@ -104,10 +108,10 @@ export function Header(){
                         <Link href="#Contacto">Contacto</Link>
                     </li>
                     <li
-                        className="text-[18px] bg-[#06F180] py-2 px-4 font-bold rounded-2xl transition-all cursor-pointer hover:scale-102 text-center shadow-lg"
-                        onClick={() => setIsOpen(false)}
+                    className="text-[18px] bg-[#06F180] py-2 px-4 font-bold rounded-2xl transition-all cursor-pointer hover:scale-102 text-center shadow-lg"
+                    onClick={() => setIsOpen(false)}
                     >
-                        <Link href="#Donar">Donar</Link>
+                    <Link href="/nosotros#financiamiento" aria-label="Ir a Financiamiento">Donar</Link>
                     </li>
                 </ul>
             </aside>
