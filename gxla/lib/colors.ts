@@ -36,15 +36,15 @@ export const colors = {
     red500: "var(--red-500)",
     red600: "var(--red-600)",
   },
-
-} as const
+} as const;
 
 // CSS class mappings for Tailwind
 export const colorClasses = {
   button: {
     primary: "bg-primary hover:bg-primary-hover text-black",
     secondary: "bg-gray-800 hover:bg-gray-900 text-white",
-    outline: "border-green-400 text-green-600 hover:bg-green-200 bg-transparent",
+    outline:
+      "border-green-400 text-green-600 hover:bg-green-200 bg-transparent",
     cta: "bg-black hover:bg-gray-800 text-white",
   },
   background: {
@@ -61,4 +61,4 @@ export const colorClasses = {
     white: "text-white",
     black: "text-black",
   },
-} as const
+} as const;

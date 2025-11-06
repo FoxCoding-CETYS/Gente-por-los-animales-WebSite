@@ -12,7 +12,7 @@ export function Footer(){
                 width={195}
                 height={74}
                 />
-                <p className="mt-3">
+                <p className="mt-3 text-base md:text-md lg:text-lg">
                     Nuestra misión es promover el bienestar animal mediante los programas de esterilización, adopción, 
                     educación y denuncia ciudadana; e incidir en las políticas públicas que determinen las autoridades 
                     para el control ético de la población canina y felina.
@@ -20,12 +20,12 @@ export function Footer(){
             </div>
 
             <div>
-                <h1 className="font-bold text-3xl mb-2"> Contacto </h1>
-                <p>genteporlosanimales@gmail.com</p>
+                <h1 className="font-bold text-4xl mb-2"> Contacto </h1>
+                <a className="text-base md:text-lg lg:text-xl" href="mailto:genteporlosanimales@gmail.com">genteporlosanimales@gmail.com</a>
             </div>
 
             <div>
-                <h1 className="font-bold text-3xl mb-2"> Siguenos </h1>
+                <h1 className="font-bold text-4xl mb-2"> Siguenos </h1>
                 <div className="flex gap-6.5">
                     <Link href="" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                         <Image 
