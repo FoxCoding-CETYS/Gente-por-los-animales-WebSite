@@ -35,6 +35,9 @@ export default function GxlaPage() {
         buttonText="Dona Ahora"
         buttonVariant="secondary"
         buttonSize="lg"
+        onButtonClick={() => {
+          window.location.href = "/nosotros#financiamiento";
+        }}
         backgroundClassName="bg-[#05DF72]"
         textColorClassName="text-black"
       />

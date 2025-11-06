@@ -227,37 +227,52 @@ export function HeroSection() {
       delay: 1000,
       rotation: 70,
     },
-    //{ className: "absolute top-12 left-65 invisible lg:visible transform xl:scale-125", delay: 1200, rotation: 100 },
-    //{ className: "absolute top-18 left-77 invisible lg:visible transform xl:scale-125", delay: 1400, rotation: 120 },
-    //{ className: "absolute top-25 left-88 invisible lg:visible transform xl:scale-125", delay: 1600, rotation: 110 },
+    /*{
+      className:
+        "absolute top-12 left-65 invisible 2xl:visible transform xl:scale-125",
+      delay: 1200,
+      rotation: 100,
+    },*/
+    /* {
+      className:
+        "absolute top-18 left-77 invisible 2xl:visible transform xl:scale-125",
+      delay: 1400,
+      rotation: 120,
+    },*/
+    /*{
+      className:
+        "absolute top-25 left-88 invisible 2xl:visible transform xl:scale-125",
+      delay: 1600,
+      rotation: 110,
+    },*/
     {
       className:
         "absolute top-35 left-100 invisible xl:visible transform xl:scale-125",
-      delay: 1800,
+      delay: 1200,
       rotation: 110,
     },
     {
       className:
         "absolute top-40 left-112 invisible xl:visible transform xl:scale-125",
-      delay: 2000,
+      delay: 1400,
       rotation: 105,
     },
     {
       className:
         "absolute top-38 left-124 invisible xl:visible transform xl:scale-125",
-      delay: 2200,
+      delay: 1600,
       rotation: 85,
     },
     {
       className:
         "absolute top-34 left-136 invisible xl:visible transform xl:scale-125",
-      delay: 2400,
+      delay: 1800,
       rotation: 80,
     },
     {
       className:
         "absolute top-32 left-148 invisible xl:visible transform xl:scale-125",
-      delay: 2600,
+      delay: 2000,
       rotation: 75,
     },
     //{ className: "absolute top-26 left-160 invisible lg:visible transform xl:scale-125", delay: 2800, rotation: 70 },
@@ -265,46 +280,52 @@ export function HeroSection() {
     {
       className:
         "absolute top-18 left-184 invisible xl:visible transform xl:scale-125",
-      delay: 3200,
+      delay: 2200,
       rotation: 60,
     },
     {
       className:
         "absolute top-14 left-196 invisible xl:visible transform xl:scale-125",
-      delay: 3400,
+      delay: 2400,
       rotation: 55,
     },
     {
       className:
+        "absolute top-70 right-45 invisible 2xl:visible transform scale-125",
+      delay: 2500,
+      rotation: 120,
+    },
+    {
+      className:
         "absolute top-76 right-32 invisible xl:visible transform xl:scale-125",
-      delay: 3600,
+      delay: 2600,
+      rotation: 120,
+    },
+    {
+      className:
+        "absolute top-15 left-208 invisible 2xl:visible transform scale-125",
+      delay: 2600,
       rotation: 120,
     },
     {
       className:
         "absolute top-84 right-20 invisible xl:visible transform xl:scale-125",
-      delay: 3800,
+      delay: 2800,
       rotation: 130,
     },
     {
       className:
         "absolute top-90 right-8 invisible xl:visible transform xl:scale-125",
-      delay: 4000,
+      delay: 3000,
       rotation: 120,
     },
     // Paw prints for even larger screens
-    {
-      className:
-        "absolute top-15 left-208 invisible 2xl:visible transform scale-125",
-      delay: 4000,
-      rotation: 120,
-    },
-    {
+    /*{
       className:
         "absolute top-21 left-220 invisible 2xl:visible transform scale-125",
       delay: 4000,
       rotation: 140,
-    },
+    },*/
     {
       className:
         "absolute top-26 left-232 invisible 2xl:visible transform scale-125",
@@ -322,12 +343,6 @@ export function HeroSection() {
         "absolute top-40 left-256 invisible 2xl:visible transform scale-125",
       delay: 4000,
       rotation: 150,
-    },
-    {
-      className:
-        "absolute top-70 right-45 invisible 2xl:visible transform scale-125",
-      delay: 4000,
-      rotation: 120,
     },
     {
       className:
@@ -359,7 +374,7 @@ export function HeroSection() {
       <PawPrintTrail positions={pawPrintPositions} />
 
       <div className="max-w-lg sm:max-w-2xl lg:max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 items-center">
-        <div className="space-y-4 sm:space-y-6 order-1 z-100">
+        <div className="space-y-4 sm:space-y-6 order-1 z-99">
           <h1
             className={cn(
               "text-center sm:text-left font-bold leading-tight",

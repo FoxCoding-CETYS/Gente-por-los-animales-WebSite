@@ -24,7 +24,7 @@ export function SuccessStoryCard({
   story,
   alt = "Pet profile photo",
   className,
-  avatarClassName = "w-30 h-30",
+  avatarClassName = "w-20 h-20 md:w-30 md:h-30",
   roundAvatar = true,
 }: SuccessStoryCardProps) {
   return (

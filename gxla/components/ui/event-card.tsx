@@ -34,7 +34,7 @@ export function EventCard({
       <img
         src={image || "/placeholder.svg"}
         alt={alt}
-        className="w-full h-48 object-cover"
+        className="w-full h-38 md:h-48 object-cover"
       />
       <CardContent className="p-6 space-y-4">
         <div className="flex items-center justify-between">

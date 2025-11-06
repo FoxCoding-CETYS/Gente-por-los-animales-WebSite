@@ -41,11 +41,18 @@ export function CTABanner({
         className
       )}
     >
-      <h1 className={cn("font-geist font-bold mt-10 p-4 w-10/12", t.display)}>
+      <h1
+        className={cn(
+          "font-geist font-bold mt-10 p-4 w-full md:w-10/12",
+          t.display
+        )}
+      >
         {title}
       </h1>
 
-      {subtitle && <p className={cn("p-5 w-8/12", t.bodyHero)}>{subtitle}</p>}
+      {subtitle && (
+        <p className={cn("p-5 w-full md:w-8/12", t.bodyHero)}>{subtitle}</p>
+      )}
 
       {buttonHref ? (
         <CustomButton
