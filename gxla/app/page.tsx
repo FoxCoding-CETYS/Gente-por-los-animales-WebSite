@@ -1,11 +1,9 @@
-"use client";
-
 import { HeroSection } from "@/components/sections/hero-section";
 import { DonationSection } from "@/components/sections/donation-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { WhatWeDoSection } from "@/components/sections/what-we-do-section";
 import { ProgramsSection } from "@/components/sections/programs-section";
-import { EventsSection } from "@/components/sections/events-section";
+import EventsClient from "@/components/sections/events-section-client";
 import { SuccessStoriesSection } from "@/components/sections/success-stories-section";
 import { SponsorsAlliesSection } from "@/components/sections/sponsors-allies-section";
 import { CTABanner } from "@/components/sections/cta-banner";
@@ -23,7 +21,7 @@ export default function GxlaPage() {
 
       <ProgramsSection />
 
-      <EventsSection />
+      <EventsClient />
 
       <SuccessStoriesSection />
 
@@ -35,9 +33,6 @@ export default function GxlaPage() {
         buttonText="Dona Ahora"
         buttonVariant="secondary"
         buttonSize="lg"
-        onButtonClick={() => {
-          window.location.href = "/nosotros#financiamiento";
-        }}
         backgroundClassName="bg-[#05DF72]"
         textColorClassName="text-black"
       />

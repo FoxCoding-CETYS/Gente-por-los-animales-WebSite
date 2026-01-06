@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { colorClasses } from "@/lib/colors";
+import { locationToLink, shortLocation } from "@/lib/format-location";
 import { t, cn } from "@/lib/typography";
 
 interface EventCardProps {
@@ -26,7 +27,7 @@ export function EventCard({
   return (
     <Card
       className={cn(
-        "overflow-hidden shadow-lg",
+        "overflow-hidden shadow-lg min-h-[30rem] max-h-[30rem]",
         colorClasses.background.primary,
         className
       )}
@@ -37,7 +38,7 @@ export function EventCard({
         className="w-full h-38 md:h-48 object-cover"
       />
       <CardContent className="p-6 space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row items-start gap-5 md:gap-1 md:items-center justify-between">
           <time
             className={cn(
               "inline-block rounded-full px-2 py-1 font-semibold",
@@ -49,13 +50,25 @@ export function EventCard({
             {date}
           </time>
           <span className={cn(colorClasses.text.secondary, t.bodySm)}>
-            {location}
+            <a
+              href={locationToLink(location)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={
+                (cn("underline hover:text-primary"),
+                location == "Ubicación por confirmar"
+                  ? "no-underline"
+                  : "underline hover:text-primary")
+              }
+            >
+              {shortLocation(location)}
+            </a>
           </span>
         </div>
         <h3 className={cn("font-bold", colorClasses.text.primary, t.subtitle)}>
           {title}
         </h3>
-        <p className={cn(colorClasses.text.secondary, t.bodySm)}>
+        <p className={cn("mt-auto", colorClasses.text.secondary, t.bodySm)}>
           {description}
         </p>
       </CardContent>

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { cn } from "@/lib/utils";  
-import { t } from "@/lib/typography";     
+import { cn } from "@/lib/utils";
+import { t } from "@/lib/typography";
 
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
@@ -28,18 +28,26 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-type TitleSize = "display" | "subtitle" | "bodyHero" | "body" | "bodySm" | "sponsorName";
-type DescSize  = "bodyHero" | "body" | "bodySm";
+type TitleSize =
+  | "display"
+  | "subtitle"
+  | "bodyHero"
+  | "body"
+  | "bodySm"
+  | "sponsorName";
+type DescSize = "bodyHero" | "body" | "bodySm";
 
 const sizeClass = (size: TitleSize | DescSize) =>
-  ({
-    display: t.display,
-    subtitle: t.subtitle,
-    bodyHero: t.bodyHero,
-    body: t.body,
-    bodySm: t.bodySm,
-    sponsorName: t.sponsorName,
-  } as const)[size];
+  ((
+    {
+      display: t.display,
+      subtitle: t.subtitle,
+      bodyHero: t.bodyHero,
+      body: t.body,
+      bodySm: t.bodySm,
+      sponsorName: t.sponsorName,
+    } as const
+  )[size]);
 
 interface CardTitleProps extends React.ComponentProps<"div"> {
   as?: "h1" | "h2" | "h3" | "h4" | "p" | "div";
@@ -57,7 +65,7 @@ function CardTitle({
     <Comp
       data-slot="card-title"
       className={cn("leading-none font-semibold", sizeClass(size), className)}
-      {...(props as any)}
+      {...props}
     />
   );
 }
@@ -78,7 +86,7 @@ function CardDescription({
     <Comp
       data-slot="card-description"
       className={cn("text-muted-foreground", sizeClass(size), className)}
-      {...(props as any)}
+      {...props}
     />
   );
 }
@@ -98,7 +106,11 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
 
 function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div data-slot="card-content" className={cn("px-6", className)} {...props} />
+    <div
+      data-slot="card-content"
+      className={cn("px-6", className)}
+      {...props}
+    />
   );
 }
 
