@@ -2,6 +2,15 @@ import { EventCard } from "@/components/ui/event-card";
 import { CustomButton } from "@/components/ui/custom-button";
 import { SectionHeader } from "@/components/ui/section-header";
 import { colorClasses } from "@/lib/colors";
+import { getPublicEvents } from "@/lib/google-calendar";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
+import { Card, CardContent } from "../ui/card";
 
 interface Event {
   image: string;
@@ -12,27 +21,28 @@ interface Event {
   alt: string;
 }
 
-export function EventsSection() {
-  const events: Event[] = [
-    {
-      image: "/charity-golf-tournament-poster-with-pets.png",
-      date: "Marzo 15, 2025",
-      location: "Centro Cívico, Mexicali, BC",
-      title: "Carrera Atlética Guardián Responsable",
-      description:
-        "Acompáñenos a nuestra carrera/caminata anual de 5 km para promover la tenencia responsable de mascotas. Traiga a sus amigos peludos para un día de diversión y comunidad.",
-      alt: "Carrera Atlética Guardián Responsable",
-    },
-    {
-      image: "/pet-walk-fundraising-event-with-happy-dogs.png",
-      date: "Abril 8, 2025",
-      location: "Centro Comunitario",
-      title: "Venta de pasteles comunitarios",
-      description:
-        "Deliciosas golosinas caseras y productos horneados para apoyar nuestra misión. Todos los ingresos se destinan directamente a ayudar a las mascotas que necesitan atención médica.",
-      alt: "Venta de pasteles comunitarios",
-    },
-  ];
+function formatDate(event: { date?: string; dateTime?: string }) {
+  const raw = event.dateTime ?? event.date;
+  if (!raw) return "";
+
+  return new Date(raw).toLocaleDateString("es-MX", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
+export async function EventsSection() {
+  const googleEvents = await getPublicEvents();
+
+  const events: Event[] = googleEvents.map((event) => ({
+    image: "/default-event.png", // imagen por defecto
+    date: formatDate(event.start),
+    location: event.location ?? "Ubicación por confirmar",
+    title: event.summary ?? "Evento",
+    description: event.description ?? "",
+    alt: event.summary ?? "Evento",
+  }));
 
   return (
     <section
@@ -41,23 +51,34 @@ export function EventsSection() {
       <div className="max-w-6xl mx-auto">
         <SectionHeader title="EVENTOS & NOTICIAS" className="mb-8 sm:mb-12" />
 
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8">
-          {events.map((event, index) => (
-            <EventCard
-              key={index}
-              image={event.image}
-              date={event.date}
-              location={event.location}
-              title={event.title}
-              description={event.description}
-              alt={event.alt}
-            />
-          ))}
-        </div>
+        <Carousel className="w-full max-w-4xl mx-auto overflow-hidden md:overflow-visible items-center mb-5">
+          <CarouselContent>
+            {events.map((event, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <EventCard
+                    key={index}
+                    image={event.image}
+                    date={event.date}
+                    location={event.location}
+                    title={event.title}
+                    description={event.description}
+                    alt={event.alt}
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
 
         <div className="text-center">
           <CustomButton variant="primary" size="lg">
-            Calendario Completo
+            <a href="https://calendar.google.com/calendar/u/0?cid=ZTI2ZWNmMzZmYzJlMzQ2MjUwYTk4NDNiYzJjNTc1YmJlYWFiMGZmODlmMDRlMGQ2NjQyODczZDQ5OGNlZmEyNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
+              {" "}
+              Calendario Completo
+            </a>
           </CustomButton>
         </div>
       </div>

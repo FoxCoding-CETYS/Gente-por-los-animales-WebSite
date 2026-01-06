@@ -1,27 +1,32 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 interface PawPrintProps {
-  className?: string
-  delay?: number
-  rotation?: number
-  size?: "sm" | "md" | "lg"
+  className?: string;
+  delay?: number;
+  rotation?: number;
+  size?: "sm" | "md" | "lg";
 }
 
 const sizeClasses = {
   sm: "w-8 h-8",
   md: "w-10 h-10",
   lg: "w-12 h-12",
-}
+};
 
-export function PawPrint({ className = "", delay = 0, rotation = 0, size = "md" }: PawPrintProps) {
-  const [isVisible, setIsVisible] = useState(false)
+export function PawPrint({
+  className = "",
+  delay = 0,
+  rotation = 0,
+  size = "md",
+}: PawPrintProps) {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), delay)
-    return () => clearTimeout(timer)
-  }, [delay])
+    const timer = setTimeout(() => setIsVisible(true), delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
 
   return (
     <div
@@ -36,5 +41,5 @@ export function PawPrint({ className = "", delay = 0, rotation = 0, size = "md" 
         className={sizeClasses[size]}
       />
     </div>
-  )
+  );
 }

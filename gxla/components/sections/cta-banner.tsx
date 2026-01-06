@@ -67,7 +67,9 @@ export function CTABanner({
           size={buttonSize}
           variant={buttonVariant}
           className="mb-14 mt-6"
-          onClick={onButtonClick}
+          onClick={() => {
+            window.location.href = "/nosotros#financiamiento";
+          }}
         >
           {buttonText}
         </CustomButton>

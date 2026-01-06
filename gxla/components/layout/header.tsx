@@ -1,27 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import { CustomButton } from "@/components/ui/custom-button";
-import { t, cn } from "@/lib/typography";
-
-type NavItem = { label: string; href: string; isHash?: boolean };
-
-const NAV_ITEMS: NavItem[] = [
-  { label: "Inicio", href: "/" },
-  { label: "¿Quiénes somos?", href: "/nosotros" },
-  { label: "Programas", href: "/programas", isHash: true },
-  { label: "Difusión", href: "/difusion" },
-  { label: "¿Cómo ayudar?", href: "/acciones" },
-  { label: "Contacto", href: "/contacto", isHash: true },
-];
+import { NavLink } from "../nav-link";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <nav className="sticky top-0 left-0 w-full h-full bg-white backdrop-blur-md z-1000 shadow-sm shadow-green-600 text-black">
@@ -32,25 +18,25 @@ export function Header() {
         <div>
           <ul className="hidden md:flex justify-center space-x-5 lg:gap-5 md:gap-2 items-center">
             <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
-              <Link href="/">Inicio</Link>
+              <NavLink href="/">Inicio</NavLink>
             </li>
             <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
-              <Link href="/nosotros">¿Quienes somos?</Link>
+              <NavLink href="/nosotros">¿Quienes somos?</NavLink>
             </li>
             <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
-              <Link href="#Contacto">Programas</Link>
+              <NavLink href="/programas">Programas</NavLink>
             </li>
             <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
-              <Link href="/difusion">Difusión</Link>
+              <NavLink href="/difusion">Difusión</NavLink>
             </li>
             <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
-              <Link href="/acciones">¿Cómo ayudar?</Link>
+              <NavLink href="/acciones">¿Cómo ayudar?</NavLink>
             </li>
             <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
-              <Link href="#Contacto">Contacto</Link>
+              <NavLink href="#contacto">Contacto</NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 href="/nosotros#financiamiento"
                 aria-label="Ir a Financiamiento"
               >
@@ -61,7 +47,7 @@ export function Header() {
                 >
                   DONAR
                 </CustomButton>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -89,48 +75,48 @@ export function Header() {
                 className="text-[18px] hover:underline hover:underline-offset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                <Link href="/">Inicio</Link>
+                <NavLink href="/">Inicio</NavLink>
               </li>
               <li
                 className="text-[18px] hover:underline hover:underline-aoffset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                <Link href="/nosotros">¿Quienes somos?</Link>
+                <NavLink href="/nosotros">¿Quienes somos?</NavLink>
               </li>
               <li
                 className="text-[18px] hover:underline hover:underline-offset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                <Link href="#Contacto">Programas</Link>
+                <NavLink href="#Contacto">Programas</NavLink>
               </li>
               <li
                 className="text-[18px] hover:underline hover:underline-offset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                <Link href="/difusion">Difusión</Link>
+                <NavLink href="/difusion">Difusión</NavLink>
               </li>
               <li
                 className="text-[18px] hover:underline hover:underline-offset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                <Link href="/acciones">¿Cómo ayudar?</Link>
+                <NavLink href="/acciones">¿Cómo ayudar?</NavLink>
               </li>
               <li
                 className="text-[18px] hover:underline hover:underline-offset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                <Link href="#Contacto">Contacto</Link>
+                <NavLink href="#Contacto">Contacto</NavLink>
               </li>
               <li
                 className="text-[18px] bg-[#06F180] py-2 px-4 font-bold rounded-2xl transition-all cursor-pointer hover:scale-102 text-center shadow-lg"
                 onClick={() => setIsOpen(false)}
               >
-                <Link
+                <NavLink
                   href="/nosotros#financiamiento"
                   aria-label="Ir a Financiamiento"
                 >
                   Donar
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </aside>

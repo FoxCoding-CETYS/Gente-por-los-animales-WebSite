@@ -4,7 +4,10 @@ import Image from "next/image";
 export function Footer() {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center gap-8 lg:gap-[20%] md:gap-[12%] sm:gap-8 bg-[#1E2939] text-white px-10 py-10 w-full">
+      <div
+        id="contacto"
+        className="flex flex-col md:flex-row justify-center gap-8 lg:gap-[20%] md:gap-[12%] sm:gap-8 bg-[#1E2939] text-white px-10 py-10 w-full"
+      >
         <div className="md:w-1/3">
           <Image src="/GXLA_Logo.png" alt="Logo" width={195} height={74} />
           <p className="mt-3 text-base md:text-md lg:text-lg">
