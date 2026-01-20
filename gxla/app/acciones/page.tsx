@@ -94,7 +94,7 @@ export default function Acciones() {
       <section
         className={cn(
           "px-4 sm:px-6 py-12 sm:py-16",
-          colorClasses.background.accent
+          colorClasses.background.accent,
         )}
       >
         <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -114,7 +114,7 @@ export default function Acciones() {
       <section
         className={cn(
           "px-4 sm:px-6 py-12 sm:py-16",
-          colorClasses.background.primary
+          colorClasses.background.primary,
         )}
       >
         <div className="max-w-6xl mx-auto">
@@ -130,7 +130,7 @@ export default function Acciones() {
       <section
         className={cn(
           "px-4 sm:px-6 py-12 sm:py-16",
-          colorClasses.background.secondary
+          colorClasses.background.secondary,
         )}
       >
         <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -138,7 +138,7 @@ export default function Acciones() {
           <p
             className={cn(
               "max-w-2xl mx-auto leading-relaxed text-muted-foreground",
-              t.body
+              t.body,
             )}
           >
             Si tienes dudas sobre cualquiera de nuestros servicios o no estás
@@ -146,7 +146,7 @@ export default function Acciones() {
             Nuestro equipo estará encantado de ayudarte.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CustomButton variant="primary" size="lg">
+            {/* <CustomButton variant="primary" size="lg">
               <a
                 href="https://wa.me/52XXXXXXXXXX"
                 target="_blank"
@@ -154,7 +154,7 @@ export default function Acciones() {
               >
                 Contactar por WhatsApp
               </a>
-            </CustomButton>
+            </CustomButton> */}
             <CustomButton variant="outline" size="lg">
               <a href="mailto:genteporlosanimales@gmail.com">Enviar Email</a>
             </CustomButton>
