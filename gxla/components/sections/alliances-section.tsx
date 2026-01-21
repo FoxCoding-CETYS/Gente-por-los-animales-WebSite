@@ -21,7 +21,7 @@ export function AlliancesSection({
         <h1
           className={cn(
             "font-geist text-black font-bold mt-10 text-center",
-            t.display
+            t.display,
           )}
         >
           {title}

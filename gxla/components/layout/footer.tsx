@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -28,21 +29,16 @@ export function Footer() {
           </a>
         </div>
 
-        <div>
-          <h1 className="font-bold text-4xl mb-2"> Siguenos </h1>
-          <div className="flex gap-6.5">
+        <div className="flex flex-col md:mx-auto md:text-center md:items-center">
+          <h1 className="font-bold text-4xl mb-5"> Síguenos </h1>
+          <div className="flex gap-5">
             <Link
               href=""
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <Image
-                src="/redes/facebook.png"
-                alt="Facebook"
-                width={55}
-                height={55}
-              />
+              <Facebook className="w-10 h-10 border rounded-md p-1" />
             </Link>
             <Link
               href=""
@@ -50,12 +46,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <Image
-                src="/redes/insta.png"
-                alt="Instagram"
-                width={55}
-                height={55}
-              />
+              <Instagram className="w-11 h-11" />
             </Link>
           </div>
         </div>

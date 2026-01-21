@@ -50,28 +50,36 @@ export async function EventsSection() {
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeader title="EVENTOS & NOTICIAS" className="mb-8 sm:mb-12" />
-
-        <Carousel className="w-full max-w-4xl mx-auto overflow-hidden md:overflow-visible items-center mb-5">
-          <CarouselContent>
-            {events.map((event, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <EventCard
-                    key={index}
-                    image={event.image}
-                    date={event.date}
-                    location={event.location}
-                    title={event.title}
-                    description={event.description}
-                    alt={event.alt}
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        {events.length > 0 ? (
+          <Carousel className="w-full max-w-4xl mx-auto overflow-hidden md:overflow-visible items-center mb-5">
+            <CarouselContent>
+              {events.map((event, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <EventCard
+                      key={index}
+                      image={event.image}
+                      date={event.date}
+                      location={event.location}
+                      title={event.title}
+                      description={event.description}
+                      alt={event.alt}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        ) : (
+          <div className="w-full text-center mb-10">
+            <h1 className="text-xl">
+              No hay eventos para mostrar, vuelve mas tarde o revisa el
+              calendario completo
+            </h1>
+          </div>
+        )}
 
         <div className="text-center">
           <CustomButton variant="primary" size="lg">

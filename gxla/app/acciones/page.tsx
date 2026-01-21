@@ -118,7 +118,7 @@ export default function Acciones() {
         )}
       >
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:max-w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {actionItems.map((item) => (
               <ActionCard key={item.title} {...item} />
             ))}

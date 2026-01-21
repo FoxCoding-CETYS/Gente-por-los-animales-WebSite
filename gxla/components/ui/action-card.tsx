@@ -23,12 +23,12 @@ export function ActionCard({
   accentText,
 }: ActionCardProps) {
   return (
-    <Card className="group hover:shadow-xl outline outline-white/90 shadow-md hover:outline-yellow-400 transition-all duration-300 focus-within:ring-2 focus-within:ring-yellow-400">
-      <CardContent className="p-6 space-y-4 text-center h-full flex flex-col">
+    <Card className="group hover:shadow-xl outline md:outline-white shadow-md hover:outline-yellow-400 transition-all duration-300 focus-within:ring-2 focus-within:ring-yellow-400">
+      <CardContent className="md:p-6 space-y-4 text-center h-full flex flex-col">
         <div
           className={cn(
             "w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300",
-            accentBg
+            accentBg,
           )}
           aria-hidden="true"
         >
@@ -38,7 +38,7 @@ export function ActionCard({
         <h3
           className={cn(
             "font-bold transition-colors group-hover:text-yellow-600",
-            t.subtitle
+            t.subtitle,
           )}
         >
           {title}
@@ -47,7 +47,7 @@ export function ActionCard({
         <p
           className={cn(
             "flex-grow leading-relaxed text-muted-foreground",
-            t.bodySm
+            t.bodySm,
           )}
         >
           {description}
@@ -55,7 +55,7 @@ export function ActionCard({
 
         <CustomButton
           variant="outline"
-          className="mt-auto group-hover:bg-yellow-400 group-hover:text-black"
+          className="mt-auto group-hover:bg-yellow-400 hover:bg-yellow-600 group-hover:text-black"
         >
           <Link href={href} aria-label={`${title} - Comenzar`}>
             Comenzar

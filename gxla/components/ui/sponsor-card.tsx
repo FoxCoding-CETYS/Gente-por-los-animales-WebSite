@@ -19,7 +19,7 @@ export function SponsorCard({
       className={cn(
         "flex items-center justify-center",
         boxClassName,
-        className
+        className,
       )}
     >
       {photoSrc ? (
