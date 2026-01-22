@@ -5,9 +5,12 @@ import React from "react";
 import { useState } from "react";
 import { CustomButton } from "@/components/ui/custom-button";
 import { NavLink } from "../nav-link";
+import { useRouter, usePathname } from "next/navigation";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <nav className="sticky top-0 left-0 w-full h-full bg-white backdrop-blur-md z-1000 shadow-sm shadow-green-600 text-black">
@@ -39,6 +42,14 @@ export function Header() {
               <NavLink
                 href="/nosotros#financiamiento"
                 aria-label="Ir a Financiamiento"
+                onClick={(e) => {
+                  if (pathname === "/nosotros") {
+                    e.preventDefault();
+                    const el = document.getElementById("financiamiento");
+                    el?.scrollIntoView({ behavior: "smooth" });
+                  }
+                  setIsOpen(false);
+                }}
               >
                 <CustomButton
                   variant="primary"
@@ -107,17 +118,20 @@ export function Header() {
               >
                 <NavLink href="#contacto">Contacto</NavLink>
               </li>
-              <li
+              <NavLink
                 className="text-[18px] bg-[#06F180] py-2 px-4 font-bold rounded-2xl transition-all cursor-pointer hover:scale-102 text-center shadow-lg"
-                onClick={() => setIsOpen(false)}
+                href="/nosotros#financiamiento"
+                onClick={(e) => {
+                  if (pathname === "/nosotros") {
+                    e.preventDefault();
+                    const el = document.getElementById("financiamiento");
+                    el?.scrollIntoView({ behavior: "smooth" });
+                  }
+                  setIsOpen(false);
+                }}
               >
-                <NavLink
-                  href="/nosotros#financiamiento"
-                  aria-label="Ir a Financiamiento"
-                >
-                  Donar
-                </NavLink>
-              </li>
+                Donar
+              </NavLink>
             </ul>
           </aside>
         )}
