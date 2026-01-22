@@ -83,12 +83,12 @@ export function Header() {
               >
                 <NavLink href="/nosotros">¿Quienes somos?</NavLink>
               </li>
-              <li
+              {/* <li
                 className="text-[18px] hover:underline hover:underline-offset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
                 <NavLink href="#Contacto">Programas</NavLink>
-              </li>
+              </li> */}
               <li
                 className="text-[18px] hover:underline hover:underline-offset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
@@ -105,7 +105,7 @@ export function Header() {
                 className="text-[18px] hover:underline hover:underline-offset-4 hover:decoration-[#06F180] hover:scale-102 transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                <NavLink href="#Contacto">Contacto</NavLink>
+                <NavLink href="#contacto">Contacto</NavLink>
               </li>
               <li
                 className="text-[18px] bg-[#06F180] py-2 px-4 font-bold rounded-2xl transition-all cursor-pointer hover:scale-102 text-center shadow-lg"
