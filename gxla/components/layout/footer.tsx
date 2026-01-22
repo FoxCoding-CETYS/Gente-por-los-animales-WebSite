@@ -33,7 +33,7 @@ export function Footer() {
           <h1 className="font-bold text-4xl mb-5"> Síguenos </h1>
           <div className="flex gap-5">
             <Link
-              href=""
+              href="https://www.facebook.com/genteporlosanimales"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"
@@ -41,7 +41,7 @@ export function Footer() {
               <Facebook className="w-10 h-10 border rounded-md p-1" />
             </Link>
             <Link
-              href=""
+              href="https://www.instagram.com/genteporlosanimales/"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"

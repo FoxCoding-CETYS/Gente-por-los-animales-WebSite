@@ -94,59 +94,61 @@ export default function NosotrosPage() {
       </div>
 
       {/* Misión y Visión */}
-      <div className="flex bg-[#F9FAFB] w-11/12 md:w-9/12 mx-auto flex-col justify-center">
-        <div className="flex lg:flex-row justify-center items-center gap-12 lg:mt-20 flex-col mt-12">
-          <CustomCard
-            variant="normal"
-            size="lg"
-            icon={<Target className="w-10 h-10" color="#05c665" />}
-            title="MISIÓN"
-          >
-            <p className={t.body}>
-              Promover el bienestar animal mediante los programas de
-              esterilización, adopción, educación y denuncia ciudadana; e
-              incidir en las políticas públicas que determinen las autoridades
-              para el control ético de la población canina y felina.
-            </p>
-          </CustomCard>
-          <CustomCard
-            variant="normal"
-            size="lg"
-            icon={<Eye className="w-10 h-10" color="#05c665" />}
-            title="VISIÓN"
-          >
-            <p className={t.body}>
-              Ser una asociación civil profesional, activa e innovadora, que
-              contribuya al bienestar de la sociedad mediante la implementación
-              de programas integrales en Mexicali que fomenten el bienestar
-              animal.
-            </p>
-          </CustomCard>
-        </div>
+      <div className="w-full bg-[#F9FAFB] ">
+        <div className="flex w-11/12 md:w-9/12 mx-auto flex-col justify-center">
+          <div className="flex lg:flex-row justify-center items-center gap-12 lg:mt-20 flex-col mt-12">
+            <CustomCard
+              variant="normal"
+              size="lg"
+              icon={<Target className="w-10 h-10" color="#05c665" />}
+              title="MISIÓN"
+            >
+              <p className={t.body}>
+                Promover el bienestar animal mediante los programas de
+                esterilización, adopción, educación y denuncia ciudadana; e
+                incidir en las políticas públicas que determinen las autoridades
+                para el control ético de la población canina y felina.
+              </p>
+            </CustomCard>
+            <CustomCard
+              variant="normal"
+              size="lg"
+              icon={<Eye className="w-10 h-10" color="#05c665" />}
+              title="VISIÓN"
+            >
+              <p className={t.body}>
+                Ser una asociación civil profesional, activa e innovadora, que
+                contribuya al bienestar de la sociedad mediante la
+                implementación de programas integrales en Mexicali que fomenten
+                el bienestar animal.
+              </p>
+            </CustomCard>
+          </div>
 
-        {/* Valores */}
-        <div className="flex bg-[#F9FAFB] w-full mx-auto flex-row justify-center items-center gap-10 lg:my-20 my-10 lg:flex-row sm:flex-col">
-          <CustomCard
-            variant="big"
-            title1="Participación"
-            text1="Aspiramos al involucramiento de la sociedad civil en estrategias que contribuyan a resolver problemáticas comunes."
-            title2="Respeto"
-            text2="Animamos a conducirse de manera considerada, con independencia de las diferencias que puedan llegar a surgir entre las personas."
-            title3="Compromiso"
-            text3="Edificamos nuestra labor sobre el compromiso individual hacia la causa, el equipo de trabajo, y los usuarios de nuestros servicios."
-            title4="Responsabilidad"
-            text4="Fomentamos que los voluntarios cumplan con sus obligaciones, enfrentando con inteligencia las situaciones que se le presenten."
-            title5="Compasión"
-            text5="Procuramos colocarnos en el lugar del otro, para entender sus necesidades y ayudarlo en la medida de nuestras posibilidades."
-            title6="Apertura"
-            text6="Propiciamos la consideración de ideas diversas, para el enriquecimiento de las propias."
-            icon={
-              <div className="mb-3">
-                <Leaf className="w-10 h-10" color="#05c665" />
-              </div>
-            }
-            title="VALORES"
-          />
+          {/* Valores */}
+          <div className="flex bg-[#F9FAFB] w-full mx-auto flex-row justify-center items-center gap-10 lg:my-20 my-10 lg:flex-row sm:flex-col">
+            <CustomCard
+              variant="big"
+              title1="Participación"
+              text1="Aspiramos al involucramiento de la sociedad civil en estrategias que contribuyan a resolver problemáticas comunes."
+              title2="Respeto"
+              text2="Animamos a conducirse de manera considerada, con independencia de las diferencias que puedan llegar a surgir entre las personas."
+              title3="Compromiso"
+              text3="Edificamos nuestra labor sobre el compromiso individual hacia la causa, el equipo de trabajo, y los usuarios de nuestros servicios."
+              title4="Responsabilidad"
+              text4="Fomentamos que los voluntarios cumplan con sus obligaciones, enfrentando con inteligencia las situaciones que se le presenten."
+              title5="Compasión"
+              text5="Procuramos colocarnos en el lugar del otro, para entender sus necesidades y ayudarlo en la medida de nuestras posibilidades."
+              title6="Apertura"
+              text6="Propiciamos la consideración de ideas diversas, para el enriquecimiento de las propias."
+              icon={
+                <div className="mb-3">
+                  <Leaf className="w-10 h-10" color="#05c665" />
+                </div>
+              }
+              title="VALORES"
+            />
+          </div>
         </div>
       </div>
 
@@ -231,69 +233,68 @@ export default function NosotrosPage() {
       <SponsorsAlliesSection />
 
       {/* Financiamiento */}
-      <div
-        id="financiamiento"
-        className="bg-[#F9FAFB] w-10/12 flex flex-col mx-auto justify-center items-center pb-12"
-      >
-        <h1 className={cn("font-geist text-black font-bold p-10", t.display)}>
-          FINANCIAMIENTO
-        </h1>
+      <div id="financiamiento" className="bg-[#F9FAFB] w-full">
+        <div className="w-10/12 flex flex-col mx-auto justify-center items-center pb-12">
+          <h1 className={cn("font-geist text-black font-bold p-10", t.display)}>
+            FINANCIAMIENTO
+          </h1>
 
-        <div className="flex lg:flex-row flex-col justify-center gap-10 items-center">
-          <CustomCard
-            variant="vertical"
-            size="lg"
-            icon={
-              <div className="bg-blue-100 p-3 rounded-full">
-                <PawPrint className="w-10 h-10" color="blue" />
-              </div>
-            }
-            title="CUOTAS DE RECUPERACIÓN"
-            className="w-11/12"
-          >
-            <p className={cn("text-left", t.body)}>
-              Al prestar algunos de los servicios de la organización, se
-              requieren cuotas de recuperación que ayuden a solventar en todo o
-              en parte el costo que esto representa. <br />
-              <br /> Por ejemplo, al adoptar un perro o un gato, se solicita una
-              cuota de recuperación que, si bien no solventa en su totalidad la
-              inversión que la asociación realiza en cada uno de los animales,
-              resulta de ayuda para compensar una parte.
-            </p>
-          </CustomCard>
+          <div className="flex lg:flex-row flex-col justify-center gap-10 items-center">
+            <CustomCard
+              variant="vertical"
+              size="lg"
+              icon={
+                <div className="bg-blue-100 p-3 rounded-full">
+                  <PawPrint className="w-10 h-10" color="blue" />
+                </div>
+              }
+              title="CUOTAS DE RECUPERACIÓN"
+              className="w-11/12"
+            >
+              <p className={cn("text-left", t.body)}>
+                Al prestar algunos de los servicios de la organización, se
+                requieren cuotas de recuperación que ayuden a solventar en todo
+                o en parte el costo que esto representa. <br />
+                <br /> Por ejemplo, al adoptar un perro o un gato, se solicita
+                una cuota de recuperación que, si bien no solventa en su
+                totalidad la inversión que la asociación realiza en cada uno de
+                los animales, resulta de ayuda para compensar una parte.
+              </p>
+            </CustomCard>
 
-          <CustomCard
-            variant="vertical"
-            size="lg"
-            icon={
-              <div className="bg-red-100 p-3 rounded-full">
-                <Heart className="w-10 h-10" color="red" />
-              </div>
-            }
-            title="DONATIVOS"
-            className="w-11/12"
-          >
-            <p className="text-left text-base sm:text-lg lg:text-xl">
-              {" "}
-              <b className="font-bold">Donativos en especie:</b> <br /> Alimento
-              para perro o gato sellado y vigente, arena para gato,
-              transportadoras, jaulas, cercos, correas, collares, shampoos,
-              cepillos, entre otros. <br />
-              <br /> <b className="font-bold">
-                Donativos económicos:
-              </b> <br /> <b className="font-bold">Cuenta BBVA:</b> 0197361246{" "}
-              <br /> <b className="font-bold">CLABE:</b> 021020040411774038{" "}
-              <br /> <b className="font-bold">PayPal:</b>{" "}
-              <a
-                href="https://www.paypal.me/genteporlosanimales"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline text-blue-600 hover:text-blue-800 transition-colors"
-              >
-                paypal.me/genteporlosanimales
-              </a>{" "}
-            </p>
-          </CustomCard>
+            <CustomCard
+              variant="vertical"
+              size="lg"
+              icon={
+                <div className="bg-red-100 p-3 rounded-full">
+                  <Heart className="w-10 h-10" color="red" />
+                </div>
+              }
+              title="DONATIVOS"
+              className="w-11/12"
+            >
+              <p className="text-left text-base sm:text-lg lg:text-xl">
+                {" "}
+                <b className="font-bold">Donativos en especie:</b> <br />{" "}
+                Alimento para perro o gato sellado y vigente, arena para gato,
+                transportadoras, jaulas, cercos, correas, collares, shampoos,
+                cepillos, entre otros. <br />
+                <br /> <b className="font-bold">
+                  Donativos económicos:
+                </b> <br /> <b className="font-bold">Cuenta BBVA:</b> 0197361246{" "}
+                <br /> <b className="font-bold">CLABE:</b> 021020040411774038{" "}
+                <br /> <b className="font-bold">PayPal:</b>{" "}
+                <a
+                  href="https://www.paypal.me/genteporlosanimales"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  paypal.me/genteporlosanimales
+                </a>{" "}
+              </p>
+            </CustomCard>
+          </div>
         </div>
       </div>
 
