@@ -176,15 +176,16 @@ export default function Acciones() {
               </h3>
               <p className={cn("mb-3 text-red-700", t.bodySm)}>
                 Si encuentras un animal en peligro inmediato o presencias
-                maltrato, contacta a las autoridades locales o llama a nuestra
-                línea de emergencia.
+                maltrato, contacta a las autoridades locales.
               </p>
               <CustomButton
                 size="sm"
                 className="bg-red-600 hover:bg-red-700 text-white"
                 aria-label="Llamar a la línea de emergencia"
               >
-                Línea de Emergencia
+                <a href="https://www.bajacalifornia.gob.mx/medio_ambiente/Denuncia?tipoId=2">
+                  Denuncia Maltrato Animal
+                </a>
               </CustomButton>
             </div>
           </div>

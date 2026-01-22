@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { colorClasses } from "@/lib/colors";
 import { locationToLink, shortLocation } from "@/lib/format-location";
 import { t, cn } from "@/lib/typography";
+import { MapPinned, Calendar } from "lucide-react";
 
 interface EventCardProps {
   image: string;
@@ -27,28 +28,24 @@ export function EventCard({
   return (
     <Card
       className={cn(
-        "overflow-hidden shadow-lg min-h-[30rem] max-h-[30rem]",
+        "overflow-hidden shadow-lg",
         colorClasses.background.primary,
-        className
+        className,
       )}
     >
-      <img
-        src={image || "/placeholder.svg"}
-        alt={alt}
-        className="w-full h-38 md:h-48 object-cover"
-      />
-      <CardContent className="p-6 space-y-4">
-        <div className="flex flex-col md:flex-row items-start gap-5 md:gap-1 md:items-center justify-between">
-          <time
-            className={cn(
-              "inline-block rounded-full px-2 py-1 font-semibold",
-              colorClasses.background.accent,
-              colorClasses.text.black,
-              t.bodySm
-            )}
-          >
-            {date}
-          </time>
+      <CardContent className="p-6 space-y-4 w-full">
+        <time
+          className={cn(
+            "inline-block rounded-full px-2 py-1 font-semibold w-full text-center",
+            colorClasses.background.accent,
+            colorClasses.text.black,
+            t.bodySm,
+          )}
+        >
+          {date}
+        </time>
+        <div className="flex gap-4 items-center">
+          <MapPinned className="min-h-5 min-w-8" />
           <span className={cn(colorClasses.text.secondary, t.bodySm)}>
             <a
               href={locationToLink(location)}

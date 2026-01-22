@@ -11,6 +11,7 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import { Card, CardContent } from "../ui/card";
+import { cn } from "@/lib/utils";
 
 interface Event {
   image: string;
@@ -43,19 +44,26 @@ export async function EventsSection() {
     description: event.description ?? "",
     alt: event.summary ?? "Evento",
   }));
+  const itemsCount = events.length;
+  const lessThanThree = itemsCount < 3;
 
   return (
     <section
-      className={`px-4 sm:px-6 py-12 sm:py-16 ${colorClasses.background.primary}`}
+      className={`px-4 sm:px-6 py-12 sm:py-14 ${colorClasses.background.primary}`}
     >
       <div className="max-w-6xl mx-auto">
-        <SectionHeader title="EVENTOS & NOTICIAS" className="mb-8 sm:mb-12" />
+        <SectionHeader title="EVENTOS & NOTICIAS" className="mb-4" />
         {events.length > 0 ? (
-          <Carousel className="w-full max-w-4xl mx-auto overflow-hidden md:overflow-visible items-center mb-5">
-            <CarouselContent>
+          <Carousel className="w-full max-w-4xl mx-auto overflow-hidden md:overflow-visible items-center mb-10">
+            <CarouselContent
+              className={cn("-ml-2", lessThanThree && "justify-center")}
+            >
               {events.map((event, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
+                <CarouselItem
+                  key={index}
+                  className="pl-2 basis-full md:basis-1/3 flex"
+                >
+                  <div className="p-2 h-full">
                     <EventCard
                       key={index}
                       image={event.image}

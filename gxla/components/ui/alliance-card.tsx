@@ -2,26 +2,28 @@
 
 import { CustomCard } from "@/components/ui/custom-card";
 import { t, cn } from "@/lib/typography";
+import { Handshake } from "lucide-react";
 
 type AllianceCardProps = {
   name: string;
   description: string;
-  /** opcional: cambia el icono si quieres */
-  iconSrc?: string;
   className?: string;
 };
 
 export function AllianceCard({
   name,
   description,
-  iconSrc = "/Circle.png",
   className,
 }: AllianceCardProps) {
   return (
     <CustomCard
       variant="vertical"
       size="md"
-      icon={iconSrc}
+      icon={
+        <div className="bg-green-400 p-3 rounded-full">
+          <Handshake className="w-10 h-10 mx-auto" color="black" />
+        </div>
+      }
       title={name}
       className={className}
     >

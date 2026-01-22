@@ -5,6 +5,7 @@ import { CustomButton } from "@/components/ui/custom-button";
 import { PawPrint } from "@/components/ui/paw-print";
 import { colorClasses } from "@/lib/colors";
 import { t, cn } from "@/lib/typography";
+import Link from "next/link";
 
 interface CircularImageProps {
   src: string;
@@ -388,13 +389,15 @@ export function HeroSection() {
           </h1>
           {/* Desktop / large screens button */}
           <div className="hidden lg:block">
-            <CustomButton
-              variant="secondary"
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              AYÚDANOS
-            </CustomButton>
+            <Link href={"/acciones"}>
+              <CustomButton
+                variant="secondary"
+                size="lg"
+                className="w-full sm:w-auto"
+              >
+                Ayúdanos
+              </CustomButton>
+            </Link>
           </div>
         </div>
 
@@ -423,7 +426,7 @@ export function HeroSection() {
               delay={500}
               gradientFrom="from-pink-100"
               gradientTo="to-pink-200"
-              size="w-25 h-25 sm:w-15 sm:h-15 md:w-25 md:h-25"
+              size="w-25 h-25 sm:w-15 sm:h-15 md:w-35 md:h-35"
             />
 
             <CircularImage
@@ -433,7 +436,7 @@ export function HeroSection() {
               delay={700}
               gradientFrom="from-green-100"
               gradientTo="to-green-200"
-              size="w-20 h-20 sm:w-25 sm:h-25 md:w-20 md:h-20"
+              size="w-20 h-20 sm:w-25 sm:h-25 md:w-25 md:h-25"
             />
 
             <CircularImage
@@ -443,7 +446,7 @@ export function HeroSection() {
               delay={900}
               gradientFrom="from-purple-100"
               gradientTo="to-purple-200"
-              size="w-25 h-25 sm:w-15 sm:h-15 md:w-30 md:h-30"
+              size="w-25 h-25 sm:w-15 sm:h-15 md:w-40 md:h-40"
             />
 
             <CircularImage
@@ -453,16 +456,18 @@ export function HeroSection() {
               delay={1100}
               gradientFrom="from-orange-100"
               gradientTo="to-orange-200"
-              size="w-20 h-20 sm:w-20 sm:h-20 md:w-20 md:h-20"
+              size="w-20 h-20 sm:w-20 sm:h-20 md:w-28 md:h-28"
             />
           </div>
         </div>
       </div>
       {/* Mobile / tablet button (below images) */}
       <div className="block lg:hidden mt-10 flex justify-center">
-        <CustomButton variant="secondary" size="lg">
-          AYÚDANOS
-        </CustomButton>
+        <Link href={"/acciones"}>
+          <CustomButton variant="secondary" size="lg">
+            Ayúdanos
+          </CustomButton>
+        </Link>
       </div>
     </section>
   );

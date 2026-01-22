@@ -23,9 +23,9 @@ export function Header() {
             <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
               <NavLink href="/nosotros">¿Quienes somos?</NavLink>
             </li>
-            <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
+            {/*<li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
               <NavLink href="/programas">Programas</NavLink>
-            </li>
+            </li>*/}
             <li className="lg:text-[20px] md:text-[14px] hover:underline hover:underline-offset-4 hover:decoration-green-500 transition-all duration-300 hover:scale-105 origin-center">
               <NavLink href="/difusion">Difusión</NavLink>
             </li>

@@ -53,14 +53,14 @@ export function ActionCard({
           {description}
         </p>
 
-        <CustomButton
+        {/* <CustomButton
           variant="outline"
           className="mt-auto group-hover:bg-yellow-400 hover:bg-yellow-600 group-hover:text-black"
         >
           <Link href={href} aria-label={`${title} - Comenzar`}>
             Comenzar
           </Link>
-        </CustomButton>
+        </CustomButton> */}
       </CardContent>
     </Card>
   );

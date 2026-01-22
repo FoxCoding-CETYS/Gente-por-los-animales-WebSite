@@ -27,7 +27,7 @@ export function AlliancesSection({
           {title}
         </h1>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 p-8 gap-5 lg:gap-15 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-8 gap-5 lg:gap-15 justify-center">
           {items.map((a, i) => (
             <AllianceCard key={i} name={a.name} description={a.description} />
           ))}

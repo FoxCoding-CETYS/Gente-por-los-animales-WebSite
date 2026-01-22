@@ -9,7 +9,7 @@ export function DonationSection() {
     <section
       className={cn(
         "px-4 sm:px-6 py-8 sm:py-16",
-        colorClasses.background.secondary
+        colorClasses.background.secondary,
       )}
     >
       <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
@@ -18,16 +18,16 @@ export function DonationSection() {
           subtitle="Nuestra misión es promover el bienestar animal. Aceptamos donativos en especie y económicos."
         />
         <CustomButton variant="primary" size="lg">
-          <Link href="/nosotros#financiamiento">DONAR</Link>
+          <Link href="/nosotros#financiamiento">Donar</Link>
         </CustomButton>
-        <div className="pt-3 sm:pt-4">
+        {/* <div className="pt-3 sm:pt-4">
           <p className={cn(t.bodyHero, colorClasses.text.secondary, "mb-4")}>
             ¿Tu mascota necesita asistencia médica?
           </p>
           <CustomButton variant="outline" size="lg">
             BUSCA AYUDA
           </CustomButton>
-        </div>
+        </div> */}
       </div>
     </section>
   );

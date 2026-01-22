@@ -6,6 +6,7 @@ import React from "react";
 import { t, cn } from "@/lib/typography";
 import { SponsorsAlliesSection } from "@/components/sections/sponsors-allies-section";
 import { CTABanner } from "@/components/sections/cta-banner";
+import { Eye, Heart, Leaf, PawPrint, Star, Target } from "lucide-react";
 
 export default function NosotrosPage() {
   const [completo, setCompleto] = React.useState(false);
@@ -98,7 +99,7 @@ export default function NosotrosPage() {
           <CustomCard
             variant="normal"
             size="lg"
-            icon="/Circle.png"
+            icon={<Target className="w-10 h-10" color="#05c665" />}
             title="MISIÓN"
           >
             <p className={t.body}>
@@ -111,7 +112,7 @@ export default function NosotrosPage() {
           <CustomCard
             variant="normal"
             size="lg"
-            icon="/Circle.png"
+            icon={<Eye className="w-10 h-10" color="#05c665" />}
             title="VISIÓN"
           >
             <p className={t.body}>
@@ -139,7 +140,11 @@ export default function NosotrosPage() {
             text5="Procuramos colocarnos en el lugar del otro, para entender sus necesidades y ayudarlo en la medida de nuestras posibilidades."
             title6="Apertura"
             text6="Propiciamos la consideración de ideas diversas, para el enriquecimiento de las propias."
-            icon="/heart.png"
+            icon={
+              <div className="mb-3">
+                <Leaf className="w-10 h-10" color="#05c665" />
+              </div>
+            }
             title="VALORES"
           />
         </div>
@@ -152,7 +157,7 @@ export default function NosotrosPage() {
         </h1>
 
         <div className="grid lg:grid-cols-2 grid-cols-1 justify-items-center mt-8 mb-5 px-6">
-          <ul className="list-disc w-10/12">
+          <ul className="list-disc w-10/12 marker:text-[#05c665]">
             <li className={t.body}>
               Reubicar con familias responsables y cariñosas, a través del
               programa de adopción, a aquellos animales que han sido rescatados
@@ -186,7 +191,7 @@ export default function NosotrosPage() {
             <br />
           </ul>
 
-          <ul className="list-disc w-10/12">
+          <ul className="list-disc w-10/12 marker:text-[#05c665]">
             <li className={t.body}>
               Impulsar la utilización de métodos humanitarios para la captura y
               la matanza de animales de compañía.{" "}
@@ -199,7 +204,8 @@ export default function NosotrosPage() {
             <br />
             <li className={t.body}>
               Participar con las autoridades de los distintos órdenes de
-              gobierno, competentes para atender asuntos de bienestar animal.{" "}
+              gobierno, competentes para atender asuntos de bienestar
+              animal.{" "}
             </li>
             <br />
             <li className={t.body}>
@@ -237,7 +243,11 @@ export default function NosotrosPage() {
           <CustomCard
             variant="vertical"
             size="lg"
-            icon="/heartblue.png"
+            icon={
+              <div className="bg-blue-100 p-3 rounded-full">
+                <PawPrint className="w-10 h-10" color="blue" />
+              </div>
+            }
             title="CUOTAS DE RECUPERACIÓN"
             className="w-11/12"
           >
@@ -255,7 +265,11 @@ export default function NosotrosPage() {
           <CustomCard
             variant="vertical"
             size="lg"
-            icon="/heartblue.png"
+            icon={
+              <div className="bg-red-100 p-3 rounded-full">
+                <Heart className="w-10 h-10" color="red" />
+              </div>
+            }
             title="DONATIVOS"
             className="w-11/12"
           >
@@ -290,6 +304,7 @@ export default function NosotrosPage() {
         buttonText="Voluntariado"
         buttonVariant="secondary"
         buttonSize="lg"
+        buttonHref="mailto:genteporlosanimales@gmail.com"
         backgroundClassName="bg-[#05DF72]"
         textColorClassName="text-black"
       />

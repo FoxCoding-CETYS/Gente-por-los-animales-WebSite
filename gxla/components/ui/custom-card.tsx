@@ -44,11 +44,7 @@ const gapBySize: Record<Size, string> = {
 };
 
 function renderIcon(icon?: string | React.ReactNode, className?: string) {
-  if (!icon) return null;
-  if (typeof icon === "string") {
-    return <img src={icon} alt="" className={cn("w-16 h-16", className)} />;
-  }
-  return <div className={cn("w-16 h-16", className)}>{icon}</div>;
+  return <div className={cn(className)}>{icon}</div>;
 }
 
 export function CustomCard({
@@ -84,7 +80,7 @@ export function CustomCard({
           "rounded-2xl border border-gray-200 bg-white shadow-md",
           pad,
           gap,
-          className
+          className,
         )}
       >
         <div className="flex flex-row lg:flex-col items-center lg:justify-center gap-3">
@@ -110,10 +106,10 @@ export function CustomCard({
           "rounded-2xl border border-gray-200 bg-white shadow-md",
           pad,
           gap,
-          className
+          className,
         )}
       >
-        {renderIcon(icon, "mx-auto lg:mt-1 lg:mb-3")}
+        {renderIcon(icon)}
         {title && (
           <h3 className={cn("font-bold text-center", t.subtitle)}>{title}</h3>
         )}
@@ -143,7 +139,7 @@ export function CustomCard({
         "flex flex-col items-center justify-center text-center",
         "rounded-2xl border border-gray-200 bg-white shadow-md",
         pad,
-        className
+        className,
       )}
     >
       {renderIcon(icon, "hidden lg:block mx-auto mb-2")}
@@ -152,7 +148,7 @@ export function CustomCard({
       <div
         className={cn(
           "w-11/12 mx-auto mt-6 mb-8",
-          "grid grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4"
+          "grid grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4",
         )}
       >
         {pairs.map((p, i) => (
