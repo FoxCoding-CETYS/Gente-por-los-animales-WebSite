@@ -7,35 +7,44 @@ import EventsClient from "@/components/sections/events-section-client";
 import { SuccessStoriesSection } from "@/components/sections/success-stories-section";
 import { SponsorsAlliesSection } from "@/components/sections/sponsors-allies-section";
 import { CTABanner } from "@/components/sections/cta-banner";
+import { Reveal } from "@/components/ui/reveal";
 
 export default function GxlaPage() {
   return (
     <div className="h-fit bg-white">
-      <HeroSection />
-
-      <DonationSection />
-
-      <AboutSection />
-
-      <WhatWeDoSection />
-
-      <ProgramsSection />
-
-      <EventsClient />
-
-      <SuccessStoriesSection />
-
+      <Reveal>
+        <HeroSection />
+      </Reveal>
+      <Reveal>
+        <DonationSection />
+      </Reveal>
+      <Reveal>
+        <AboutSection />
+      </Reveal>
+      <Reveal>
+        <WhatWeDoSection />
+      </Reveal>
+      <Reveal>
+        <ProgramsSection />
+      </Reveal>
+      <Reveal>
+        <EventsClient />
+      </Reveal>
+      <Reveal>
+        <SuccessStoriesSection />
+      </Reveal>
       <SponsorsAlliesSection />
-
-      <CTABanner
-        title="Tu ayuda salva vidas. Cada donación marca la diferencia."
-        subtitle="Juntos, podemos garantizar que ninguna mascota sufra por dificultades económicas. Su generosidad transforma vidas."
-        buttonText="Dona Ahora"
-        buttonVariant="secondary"
-        buttonSize="lg"
-        backgroundClassName="bg-[#05DF72]"
-        textColorClassName="text-black"
-      />
+      <Reveal>
+        <CTABanner
+          title="Tu ayuda salva vidas. Cada donación marca la diferencia."
+          subtitle="Juntos, podemos garantizar que ninguna mascota sufra por dificultades económicas. Su generosidad transforma vidas."
+          buttonText="Dona Ahora"
+          buttonVariant="secondary"
+          buttonSize="lg"
+          backgroundClassName="bg-[#05DF72]"
+          textColorClassName="text-black"
+        />
+      </Reveal>
     </div>
   );
 }

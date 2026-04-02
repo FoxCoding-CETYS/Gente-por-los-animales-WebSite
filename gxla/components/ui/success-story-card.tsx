@@ -68,7 +68,10 @@ export function SuccessStoryCard({
             >
               {title}
             </h3>
-            <Link href="https://www.facebook.com/share/p/1ABLp9rUTC/">
+            <Link
+              href="https://www.facebook.com/share/p/1ABLp9rUTC/"
+              target="_blank"
+            >
               <p
                 className={cn(
                   t.bodySm,

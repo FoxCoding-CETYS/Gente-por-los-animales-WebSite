@@ -3,7 +3,6 @@ import { CustomButton } from "@/components/ui/custom-button";
 import { SectionHeader } from "@/components/ui/section-header";
 import { colorClasses } from "@/lib/colors";
 import { type SanityDocument } from "next-sanity";
-import Link from "next/link";
 import { client } from "@/sanity/client";
 
 const POSTS_QUERY = `*[
@@ -35,7 +34,10 @@ export async function SuccessStoriesSection() {
         </div>
         <div className="text-center">
           <CustomButton variant="outline" size="lg">
-            <a href="https://www.facebook.com/hashtag/casosde%C3%A9xito">
+            <a
+              href="https://www.facebook.com/hashtag/casosde%C3%A9xito"
+              target="_blank"
+            >
               Leer más historias
             </a>
           </CustomButton>

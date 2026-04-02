@@ -54,31 +54,44 @@ export async function EventsSection() {
       <div className="max-w-6xl mx-auto">
         <SectionHeader title="EVENTOS & NOTICIAS" className="mb-4" />
         {events.length > 0 ? (
-          <Carousel className="w-full max-w-4xl mx-auto overflow-hidden md:overflow-visible items-center mb-10">
+          <Carousel className="w-full max-w-4xl mx-auto items-center mb-10">
             <CarouselContent
-              className={cn("-ml-2", lessThanThree && "justify-center")}
+              className={cn("ml-0", lessThanThree ? "justify-center" : "")}
             >
               {events.map((event, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-2 basis-full md:basis-1/3 flex"
+                  className={cn(
+                    "flex justify-center",
+                    "basis-full",
+                    "sm:basis-4/5",
+                    "md:basis-1/3",
+                  )}
                 >
-                  <div className="p-2 h-full">
+                  <div className="p-2 h-full w-full max-w-sm">
                     <EventCard
-                      key={index}
+                      className="w-full"
                       image={event.image}
                       date={event.date}
                       location={event.location}
                       title={event.title}
-                      description={event.description}
+                      description={
+                        event.description || "Sin descripción disponible"
+                      }
                       alt={event.alt}
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <div className="hidden md:block">
+              {!lessThanThree && (
+                <>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </>
+              )}
+            </div>
           </Carousel>
         ) : (
           <div className="w-full text-center mb-10">
@@ -91,7 +104,7 @@ export async function EventsSection() {
 
         <div className="text-center">
           <CustomButton variant="primary" size="lg">
-            <a href="https://calendar.google.com/calendar/u/0?cid=ZTI2ZWNmMzZmYzJlMzQ2MjUwYTk4NDNiYzJjNTc1YmJlYWFiMGZmODlmMDRlMGQ2NjQyODczZDQ5OGNlZmEyNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
+            <a href="https://calendar.google.com/calendar/embed?src=e26ecf36fc2e346250a9843bc2c575bbeaab0ff89f04e0d6642873d498cefa24%40group.calendar.google.com&ctz=America%2FTijuana">
               {" "}
               Calendario Completo
             </a>
