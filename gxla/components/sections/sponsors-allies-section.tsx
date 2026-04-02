@@ -1,5 +1,6 @@
 import { AlliancesSection } from "@/components/sections/alliances-section";
 import { SponsorsSection } from "./sponsors-section";
+import { Reveal } from "../ui/reveal";
 
 export function SponsorsAlliesSection() {
   const alliances = [
@@ -25,8 +26,12 @@ export function SponsorsAlliesSection() {
   ];
   return (
     <>
-      <AlliancesSection items={alliances} />
-      <SponsorsSection />
+      <Reveal>
+        <AlliancesSection items={alliances} />
+      </Reveal>
+      <Reveal>
+        <SponsorsSection />
+      </Reveal>
     </>
   );
 }
